@@ -14,3 +14,346 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+ion-menu [submenu] {
+  display: block;
+  padding-left: 25px;
+  overflow: hidden;
+  max-height: 0;
+  transform: scaleY(0);
+  transform-origin: 50% 0;
+  transition: transform .1s linear, max-height 0s .1s linear;
+  &.visible {
+    max-height: 9999px;
+    transform: scaleY(1);
+    transition: transform .1s linear, max-height 0s linear;
+  }
+}
+
+.footer-button .button-md{
+  margin: 0.0rem!important;
+  height: 5.4rem;
+}
+
+
+.error-text{
+  color: map-get($colors, danger);
+  right:6%;
+  margin-top: 4.2%!important;
+  margin:0px;
+  padding: 0px;
+  position: absolute;
+  z-index: 1;
+}
+
+
+.side-menu-backcolor{
+  background-color: map-get($colors,  side-menu-color);
+}
+
+.side-menu-button-style .button-inner{
+  justify-content: flex-start;
+  color: map-get($colors, primary);
+  font-weight: 400;
+  font-size: 1.1em;
+  text-transform: capitalize;
+}
+
+.side-menu-buttons{
+  height:20px;
+  margin-left:10px;
+}
+
+.side-menu-profile-pic img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 1px solid map-get($colors, primary);
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.side-menu-bg {
+  height: 175px;
+  background-color: map-get($colors, primary);
+}
+.user-name {
+  text-align: center;
+  color:  map-get($colors,  side-menu-color);
+  text-transform: uppercase;
+  font-weight: bold
+}
+
+.user-details {
+  text-align: center;
+  color:  map-get($colors,  side-menu-color);
+}
+
+.side-menu-create-button{
+  float: right;
+  margin-top: -30%;
+  padding-right: 5%;
+  color:  map-get($colors,  side-menu-color);
+  font-size: 1.2em;
+}
+
+.inner-wrap {
+  position: absolute;
+  top: 15%!important;
+  width: 100%;
+}
+
+
+/*****************profile page************/
+
+.profile-bg img {
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+  position: absolute;
+  z-index: -1;
+}
+
+.profile-pic img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 1px solid map-get($colors, primary);
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.bg {
+  height: 225px;
+  background-color: map-get($colors, dark);
+  opacity: 0.5;
+  transition : top 0.25s ease;
+}
+
+.user-name {
+  text-align: center;
+  color: map-get($colors, dark);
+  text-transform: uppercase;
+  font-weight: bold
+}
+
+.user-details {
+  text-align: center;
+  color: map-get($colors, dark);
+}
+
+.capture-button{
+  padding-left: 5%;
+  color: map-get($colors, dark);
+  font-size: 1.5em;
+}
+
+.inner-wrap {
+  position: absolute;
+  top: 5%;
+  width: 100%;
+}
+
+.display-tab-edit{
+  top: -225px!important;
+  transition : top 0.25s ease;
+  .scroll-content{
+    margin-bottom: 0px !important;
+  }
+}
+
+.label-md[stacked] {
+  font-size: 1.5rem;
+}
+
+.ion-item-background-color{
+  background: transparent
+}
+
+.ion-lable-top-tab-distance{
+  padding-top: 5%;
+  padding-left: 8%;
+}
+
+.ion-lable-mid-tab-distance{
+  padding-left: 8%;
+}
+
+
+
+.scroll-content {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}//control scroll content
+
+.tab-bg-color .tabs-md .tabbar, .tabs-ios .tabbar {
+  background: map-get($colors, primary)!important;
+}
+
+.tab-bg-color .tabs-ios .tab-button.has-title-only, .tabs-md .tab-button.has-title-only {
+  border-left: 1px solid map-get($colors, lite-primary-dark);
+  color: white;
+}
+
+.tabs-md .tab-button[aria-selected=true], .tabs-ios .tab-button[aria-selected=true] {
+  background-color: map-get($colors, lite-primary-dark);
+}
+
+.toolbar-title-md, .toolbar-title-ios {
+  font-size: 1.7rem;
+  font-weight: 400;
+  color: #424242;
+}
+
+.ion-app.md, .ion-app.ios, .scroll-content {
+  padding: 0px!important;
+}
+
+.custom-ion-button{
+  position: absolute;
+  bottom: 0px;
+  height: 8%;
+  margin: 0px!important;
+  font-size: 1.2em;
+  font-weight: 400;
+}
+
+.center-image{
+  padding-top: 10%;
+}
+
+.getstart {
+  background-image: url('../assets/img/bg.png');
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+
+.center-image img{
+  width: 60%!important;
+  height: auto!important;
+  display:block;
+  margin-right:auto;
+  margin-left:auto;
+}
+
+.text-input-wp {
+  margin: 2px 8px 0px 8px;
+  padding: 0 8px;
+  width: calc(100% - 8px - 8px);
+  border: 0px solid rgba(0, 0, 0, 0.5);
+  line-height: 0rem;
+}
+
+.getstart .list-md .item-input:last-child {
+  border-bottom: 0px;
+}
+
+.item-md.item-input.input-has-focus .item-inner {
+  border-bottom-color: transparent !important;
+  box-shadow: none !important;
+}
+.list-md .item-input.input-has-focus:last-child {
+  border-bottom-color: transparent !important;
+  box-shadow: none !important;
+}
+.list-md .item-input.input-has-focus:last-child .item-inner {
+  box-shadow: none;
+}
+.item-md.item-input.ng-valid.input-has-value:not(.input-has-focus) .item-inner {
+  border-bottom-color: transparent !important;
+  box-shadow: none !important;
+}
+.list-md .item-input.ng-valid.input-has-value:not(.input-has-focus):last-child {
+  border-bottom-color: transparent !important;
+  box-shadow: none !important;
+}
+.list-md .item-input.ng-valid.input-has-value:not(.input-has-focus):last-child .item-inner {
+  box-shadow: none;
+}
+.item-md.item-input.ng-invalid.ng-touched:not(.input-has-focus) .item-inner {
+  border-bottom-color: transparent !important;
+  box-shadow: none !important;
+}
+.list-md .item-input.ng-invalid.ng-touched:not(.input-has-focus):last-child {
+  border-bottom-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.item-md.item-block .item-inner {
+  padding-right: 8px;
+  border-bottom: 0px solid #dedede;
+}
+
+.item-ios.item-block .item-inner {
+  padding-right: 8px;
+  border-bottom: 0px solid #dedede;
+}
+
+.side-menu-color{
+  background-color: map-get($colors, lightdark),
+}
+
+ion-input{
+  width: 80%;
+  height: 20%;
+  margin: 3%;
+  padding: 5px;
+  border-color: map-get($colors, primary);
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
+  background-repeat: no-repeat;
+  background-position: right;
+  margin-left: 0px;
+  .input-cover {
+    position: static;
+  }
+}
+
+.custom-ion-item-color{
+  width: 75%;
+  height: 20%;
+  margin-top: 5px!important;
+  margin-left: 49px!important;
+  border-color: map-get($colors, primary)!important;
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
+  background: transparent;
+}
+//Css files for android/ios/windows
+
+ion-app.md [padding], ion-app.md [padding] .scroll-content {
+  padding: 10px;
+}
+ion-app.ios [padding], ion-app.ios [padding] .scroll-content {
+  padding: 10px;
+}
+ion-app.wp [padding], ion-app.wp [padding] .scroll-content {
+  padding: 10px;
+}
+
+.menu-logo {
+  padding: 7px;
+  .text-logo{
+    padding-top: 14px;
+  };
+  .img-logo {
+    height: 80px;
+    height: 80px;
+    border-radius: 50%;
+  }
+}
+
+.menu-items{
+  font-size: large;
+  background-color: #464646;
+  .menu-text-color{
+    color: white;
+  };
+  .menu-icon-color{
+    font-size: x-large;
+    color: #b5b5b5;
+  }
+}

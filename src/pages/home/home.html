@@ -1,17 +1,85 @@
+
 <ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
+  <div class="profile-bg">
+    <img src="assets/img/m-f.png" width="100%" height="100%">
+  </div>
+  <div class="bg"></div>
+  <div class="inner-wrap">
+    <div class="capture-button">
+      <ion-icon name="camera" ></ion-icon>
+    </div>
+    <div class="profile-pic">
+      <img src="assets/img/m-f.png" width="100px" height="100px">
+    </div>
+    <br>
+    <div class="user-name">ABCD PQR</div>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <div class="user-details">
+            <ion-icon name="phone-portrait"></ion-icon>
+            <br>
+            12345698
+          </div>
+        </ion-col>
+        <ion-col>
+          <div class="user-details">
+            <ion-icon name="person"></ion-icon>
+            <br>
+            100234569
+          </div>
+        </ion-col>
+        <ion-col>
+          <div class="user-details">
+            <ion-icon name="mail"></ion-icon>
+            <br>
+            abc@gmail.com
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <br>
+  </div>
 </ion-header>
 
+
 <ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+  <ion-list text-center>
+    <ion-item class="ion-item-background-color">
+      <ion-label  class="ion-lable-top-tab-distance" color="tertiary" stacked>First name</ion-label>
+      <ion-input type="email"></ion-input>
+    </ion-item>
+
+    <ion-item class="ion-item-background-color">
+      <ion-label class="ion-lable-mid-tab-distance" color="tertiary" stacked >Last name</ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
+    <br>
+    <ion-item class="custom-ion-item-color">
+      <ion-label>Gender</ion-label>
+      <ion-select [(ngModel)]="gender">
+        <ion-option value="f">Female</ion-option>
+        <ion-option value="m">Male</ion-option>
+      </ion-select>
+    </ion-item>
+    <br>
+    <ion-item class="ion-item-background-color">
+      <ion-label class="ion-lable-mid-tab-distance" color="tertiary" stacked >Address</ion-label>
+      <ion-input type="password" ></ion-input>
+    </ion-item>
+
+    <ion-item class="ion-item-background-color">
+      <ion-label class="ion-lable-mid-tab-distance" color="tertiary" stacked >Postal code</ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
+    <br>
+    <br>
+  </ion-list>
+
 </ion-content>
+<ion-footer class="footer-button" *ngIf="isKeyboardHide">
+  <button ion-button full class="custom-ion-button">SAVE PROFILE DETAILS</button>
+  <!--<button ion-button full (click)="loginAuthentication(loginForm)" type="submit"  [hidden]="form_1_Status">GET OTP</button>-->
+</ion-footer>
+
+
